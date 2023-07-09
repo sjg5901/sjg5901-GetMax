@@ -7,6 +7,17 @@ public class GetMax {
      * @return the largest value in arr.
      */
     public int max(int[] arr){
-        return -1;
+        
+        // declare current max as min possible value in java.lang
+
+        int max = Integer.MIN_VALUE;
+
+
+        // if current number exceeds current max, reset a new max to current number
+        for (int num : arr) {
+            if (num > max) max = num;
+        }
+
+        return max;
     }
 }
